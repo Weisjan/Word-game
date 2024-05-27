@@ -29,11 +29,16 @@ Words-game
 | 5 | words_eng.txt | Plik tekstowy zawierający listę 5-literowych słów
 | 6 | Readme.md | Plik Readme
 
-## Uruchamianie Aplikacji
+## Instalacja
 
-1. Uruchom plik `wordle.py`
+1. Sklonuj repozytorium:
+    ```
+    git clone https://github.com/Weisjan/Words-game.git
+    ```
 
-2. Otwórz przeglądarkę internetową i przejdź do `http://127.0.0.1:5000/`, aby rozpocząć grę.
+2. Uruchom plik `wordle.py`
+
+3. Otwórz przeglądarkę internetową i przejdź do `http://127.0.0.1:5000/`, aby rozpocząć grę.
 
 ## Opis Działania
 
