@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ffa500;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .container {
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 48px;
+            text-align: center;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-control-lg {
+            width: 30%;
+            margin: 0 auto;
+            font-size: 24px;
+            text-align: center;
+            border-radius: 0;
+            border: 2px solid #000000;
+            background-color: white; /* Zmieniono tło na białe */
+        }
+
+        .btn-primary {
+            font-size: 24px;
+            padding: 10px 30px;
+            margin-top: 20px;
+            border-radius: 5px;
+            background-color: #000000;
+            border: none;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .letter {
+            color: {{ color }};
+            font-size: 2em;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    </style>
+
+    <title>Wordle</title>
+</head>
+<body>
+<div class="container">
+    <h1>Wordle</h1>
+    <h4>Remaining attempts: {{ remaining_attempts }}</h4>
+    <form class="mt-5" method="post" action="/">
+        <div class="text-center">
+            <input class="form-control form-control-lg" type="text" placeholder="Enter your guess" name="guess" autofocus>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </div>
+    </form>
+    <div class="mt-5 text-center">
+        {% for attempt in attempts %}
+            <div>
+                {% for letter, color in attempt %}
+                    <span class="letter" style="color: {{ color }};">{{ letter }}</span>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
