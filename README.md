@@ -33,7 +33,7 @@ Words-game
 
 1. Sklonuj repozytorium:
     ```
-    git clone https://github.com/Weisjan/Words-game.git
+    git clone https://github.com/Weisjan/Word-game.git
     ```
 
 2. Uruchom plik `wordle.py`
