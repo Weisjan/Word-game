@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ffa500;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .container {
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            font-size: 24px;
+            padding: 10px 30px;
+            margin-top: 20px;
+            border-radius: 5px;
+            background-color: #000000;
+            border: none;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <title>Game Over</title>
+</head>
+<body>
+<div class="container">
+    <h1>Congratulations! The word was: {{ word }}</h1>
+    <form class="mt-5" method="post" action="/gameover">
+        <button type="submit" class="btn btn-primary">Start New Game</button>
+    </form>
+</div>
+</body>
+</html>
