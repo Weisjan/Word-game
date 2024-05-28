@@ -1,4 +1,4 @@
-# Gra słowna
+# Word game
 
 Implementacja popularnej gry słownej "Wordle" przy użyciu frameworku Flask. Gracze mają sześć prób na odgadnięcie losowo wybranego 5-literowego słowa. Po każdej próbie, gracz otrzymuje kolorowe podpowiedzi wskazujące, czy litery w słowie są poprawne i na właściwej pozycji (zielony), poprawne, ale na niewłaściwej pozycji (żółty), czy niepoprawne (czerwony).
 
