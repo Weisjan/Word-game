@@ -1,82 +1,82 @@
-# Word game
+# Word Game
 
-Implementacja popularnej gry słownej "Wordle" przy użyciu frameworku Flask. Gracze mają sześć prób na odgadnięcie losowo wybranego 5-literowego słowa. Po każdej próbie, gracz otrzymuje kolorowe podpowiedzi wskazujące, czy litery w słowie są poprawne i na właściwej pozycji (zielony), poprawne, ale na niewłaściwej pozycji (żółty), czy niepoprawne (czerwony).
+An implementation of the popular word game "Wordle" using the Flask framework. Players have six attempts to guess a randomly selected 5-letter word. After each attempt, the player receives color-coded hints indicating whether the letters are correct and in the right position (green), correct but in the wrong position (yellow), or incorrect (red).
 
-## Wymagania
+## Requirements
 
-* Python 3.10
+* Python 3.10  
 * Flask 3.0.3
 
-## Struktura Plików
+## File Structure
 
 ```
 Words-game
 ├── templates
 │   ├── index.html
 │   ├── lose.html
-│   └──  win.html
+│   └── win.html
 ├── wordle.py
 ├── words_eng.txt
 └── Readme.md
 ```
 
-| No | File Name | Details 
-|----|------------|-------|
-| 1  | wordle.py | Główny plik aplikacji zawierający trasy Flask i logikę gry
-| 2 | index.html | Główny szablon HTML dla interfejsu gry
-| 3  | win.html | Szablon HTML wyświetlany, gdy gracz wygra
-| 4 | lose.html | Szablon HTML wyświetlany, gdy gracz przegra
-| 5 | words_eng.txt | Plik tekstowy zawierający listę 5-literowych słów
-| 6 | Readme.md | Plik Readme
+| No | File Name     | Description                                                      |
+|----|---------------|------------------------------------------------------------------|
+| 1  | wordle.py     | Main application file containing Flask routes and game logic     |
+| 2  | index.html    | Main HTML template for the game interface                        |
+| 3  | win.html      | HTML template shown when the player wins                         |
+| 4  | lose.html     | HTML template shown when the player loses                        |
+| 5  | words_eng.txt | Text file containing the list of 5-letter words                  |
+| 6  | Readme.md     | This README file                                                 |
 
-## Instalacja
+## Installation
 
-1. Sklonuj repozytorium:
-    ```
-    git clone https://github.com/Weisjan/Word-game.git
-    ```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Weisjan/Word-game.git
+   ```
 
-2. Uruchom plik `wordle.py`
+2. Run the `wordle.py` file.
 
-3. Otwórz przeglądarkę internetową i przejdź do `http://127.0.0.1:5000/`, aby rozpocząć grę.
+3. Open your web browser and navigate to `http://127.0.0.1:5000/` to start the game.
 
-## Opis Działania
+## How It Works
 
-#### Gra (`worlde.py`)
+### Game Logic (`wordle.py`)
 
-Ten plik zawiera główny kod aplikacji. Kluczowe części pliku to:
+This file contains the main application code. Key components include:
 
-- **Importy i Konfiguracja**: Ustawienia Flask i importy niezbędnych modułów.
-- **Trasy**:
-  - `/`: Główna trasa obsługująca logikę gry i renderowanie głównej strony gry.
-  - `/gameover`: Trasa obsługująca zakończenie gry, gdy gracz wygra.
-  - `/gameover_lose`: Trasa obsługująca zakończenie gry, gdy gracz przegra.
-- **Logika Gry**:
-  - Inicjalizuje nową grę z losowym słowem z pliku `words_eng.txt`.
-  - Obsługuje zgadywanie przez gracza, dostarczając informacje zwrotne i śledząc pozostałe próby.
-  - Przekierowuje na odpowiednie strony zakończenia gry w zależności od wyniku.
+- **Imports and Configuration**: Sets up Flask and imports necessary modules.
+- **Routes**:
+  - `/`: Main route handling game logic and rendering the game page.
+  - `/gameover`: Triggered when the player wins the game.
+  - `/gameover_lose`: Triggered when the player loses the game.
+- **Game Logic**:
+  - Initializes a new game with a random word from `words_eng.txt`.
+  - Handles user guesses, provides feedback, and tracks remaining attempts.
+  - Redirects to win or lose pages based on the outcome.
 
-#### Index (`index.html`)
+### Index (`index.html`)
 
-Główny interfejs gry. Zawiera:
+The main game interface. Includes:
 
-- Formularz do wpisywania słów.
-- Wyświetlanie pozostałych prób.
-- Wyświetlanie poprzednich słów z kolorowymi podpowiedziami.
+- A form for submitting guesses.
+- Display of remaining attempts.
+- Display of previous guesses with color-coded feedback.
 
-#### Wygrana (`win.html`)
+### Win Page (`win.html`)
 
-Wyświetlany, gdy gracz poprawnie zgadnie słowo.
+Shown when the player correctly guesses the word.
 
-#### Przegrana (`lose.html`)
+### Lose Page (`lose.html`)
 
-Wyświetlany, gdy gracz wyczerpie wszystkie próby nie zgadując słowa.
+Shown when the player fails to guess the word after all attempts.
 
-## Uwagi
+## Notes
 
-- **Lista Słów**: Możesz zaktualizować plik `words_eng.txt`, aby zawierał własną listę 5-literowych słów.
-- **Stylizacja**: Dostosuj style CSS w plikach HTML, aby zmienić wygląd gry.
+- **Word List**: You can update the `words_eng.txt` file to include your own list of 5-letter words.
+- **Styling**: You can customize the appearance of the game by editing CSS styles in the HTML templates.
 
-## Autor
+## Author
 
 [Jan Weis](https://github.com/Weisjan)
